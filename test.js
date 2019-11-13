@@ -1,5 +1,6 @@
 const reverse = require("./reverse-string/index");
 const palindrome = require("./palindromes/index");
+const intRev = require("./interger-reversal");
 
 /**
  * Testing string reversal
@@ -29,6 +30,30 @@ test("Test if 'aba' is a palindrome", () => {
   expect(palindrome("aba")).toBeTruthy();
 });
 
-test("Test if 'bag' isn't a palindrome", () => {
-  expect(palindrome("   aba")).toBeFalsy();
+test("Test if 'bag' is NOT a palindrome", () => {
+  expect(palindrome("bag")).toBeFalsy();
+});
+
+/**
+ * Testing Integer reversal
+ */
+
+test("Test if intRev is defined", () => {
+  expect(typeof intRev).toEqual("function");
+});
+
+test("Test if -21 is -21", () => {
+  expect(intRev(-21)).toBe(-12);
+});
+
+test("Test if the integer reversal kept the pos/neg sign", () => {
+  expect(intRev(-47)).toBe(-74);
+});
+
+//  test("Test if 35 is NOT 53", ()=>{
+
+//  })
+
+test("Test to fail if value ends with a zero", () => {
+  expect(intRev(320)).toBeFalsy();
 });
