@@ -8,7 +8,7 @@ function palindrome(str) {
     rev = char + rev;
   }
 
-  return rev === str || false;
+  return rev === str;
 }
 
 module.exports = palindrome;
