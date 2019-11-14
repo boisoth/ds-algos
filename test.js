@@ -1,6 +1,7 @@
 const reverse = require("./reverse-string/index");
 const palindrome = require("./palindromes/index");
 const intRev = require("./interger-reversal");
+const maxChars = require("./max-chars");
 
 /**
  * Testing string reversal
@@ -50,10 +51,14 @@ test("Test if the integer reversal kept the pos/neg sign", () => {
   expect(intRev(-47)).toBe(-74);
 });
 
-//  test("Test if 35 is NOT 53", ()=>{
-
-//  })
-
 test("Test to fail if value ends with a zero", () => {
   expect(intRev(320)).toBeFalsy();
+});
+
+/**
+ * Testing Max Characters
+ */
+
+test("Test if maxChar is defined", () => {
+  expect(typeof maxChars).toEqual("function");
 });
