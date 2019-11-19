@@ -24,7 +24,10 @@ function maxChar(str) {
     }
   }
 
+  console.log(maxChar);
   return maxChar;
 }
+
+maxChar("yaaaaay");
 
 module.exports = maxChar;
