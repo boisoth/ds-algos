@@ -8,6 +8,7 @@ function intRev(num) {
 
   // temp[temp.length -1] // temp[2] == 0
 
+  // checking to make sure
   if (temp[temp.length - 1] == 0) {
     return false;
   } else {

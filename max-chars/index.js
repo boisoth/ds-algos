@@ -25,4 +25,6 @@ function maxChar(str) {
   return maxChar;
 }
 
+// make sure the the str isn't emp
+
 module.exports = maxChar;
