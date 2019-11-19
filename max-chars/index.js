@@ -3,31 +3,26 @@
  */
 
 function maxChar(str) {
-  const charObj = {};
+  let charMap = {};
   let max = 0;
   let maxChar = "";
 
-  // creating a character map and assigning with 1 or incrementing the value
   for (let char of str) {
-    if (!charObj[char]) {
-      charObj[char] = 1;
+    if (!charMap[char]) {
+      charMap[char] = 1;
     } else {
-      charObj[char]++;
+      charMap[char]++;
     }
   }
 
-  // loop each key of that character map
-  for (let key in charObj) {
-    if (charObj[key] > max) {
-      max = charObj[key];
+  for (let key in charMap) {
+    if (charMap[key] > max) {
+      max = charMap[key];
       maxChar = key;
     }
   }
 
-  console.log(maxChar);
   return maxChar;
 }
-
-maxChar("yaaaaay");
 
 module.exports = maxChar;
