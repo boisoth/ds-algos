@@ -3,6 +3,7 @@ const palindrome = require("./palindromes/index");
 const intRev = require("./interger-reversal");
 const maxChars = require("./max-chars");
 const fizzBuzz = require("./fizz-buzz");
+const anagrams = require("./anagrams");
 
 /**
  * Testing string reversal
@@ -75,4 +76,14 @@ test("Test if a is the max character of abaaaaaak", () => {
 
 test("Test if fizzBuzz is defined", () => {
   expect(typeof fizzBuzz).toEqual("function");
+});
+
+// Add more tests for fizz buzz
+
+/**
+ * Anagrams
+ */
+
+test("Test if anagrams is defined", () => {
+  expect(typeof anagrams).toEqual("function");
 });

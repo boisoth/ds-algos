@@ -14,3 +14,5 @@ function buildCharMap(str) {
 
   return charMap;
 }
+
+module.exports = anagrams;
