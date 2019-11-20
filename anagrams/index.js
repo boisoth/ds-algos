@@ -1,4 +1,7 @@
-function anagrams(strA, strB) {}
+function anagrams(strA, strB) {
+  const aMap = buildCharMap(strA);
+  const bMap = buildCharMap(strB);
+}
 
 // Helper functions to build map
 function buildCharMap(str) {
