@@ -4,6 +4,7 @@
  * append()
  * printList()
  * insert()
+ * remove()
  * reverse()
  */
 
@@ -36,10 +37,19 @@
       this.tail = node;
       this.length++;
     }
+    printList() {
+      const dataArr = [];
+      let currendNode = this.head;
+      while (currendNode !== null) {
+        dataArr.push(currendNode.data);
+        currendNode = currendNode.next;
+      }
+      return dataArr;
+    }
   }
 
   const myList = new LinkedList(5);
   myList.prepend(2);
   myList.append(10);
-  console.log(myList);
+  console.log(myList.printList());
 })();
