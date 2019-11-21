@@ -30,9 +30,16 @@
       this.head = node;
       this.length++;
     }
+    append(data) {
+      const node = new Node(data);
+      this.tail.next = node;
+      this.tail = node;
+      this.length++;
+    }
   }
 
   const myList = new LinkedList(5);
   myList.prepend(2);
+  myList.append(10);
   console.log(myList);
 })();
