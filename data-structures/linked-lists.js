@@ -22,7 +22,7 @@
         next: null
       };
       this.tail = this.head;
-      this.length = 0;
+      this.length = 1;
     }
   }
 
