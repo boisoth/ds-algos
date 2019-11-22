@@ -1,11 +1,12 @@
 /**
  * Data Structure - Linked List
- * prepend()
- * append()
- * printList()
- * insert()
- * remove()
- * reverse()
+ * prepend() -- Adds node to head
+ * append() -- Adds node to tail
+ * printList() -- Prints all node data in an array
+ * traverseToIndex() -- Returns node at index
+ * insert() -- Inserts at index
+ * remove() -- Removes at index
+ * reverse() -- Reverses order of linked list
  */
 
 (function() {
