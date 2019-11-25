@@ -47,6 +47,15 @@
       }
       return dataArr;
     }
+    traverseToIndex(index) {
+      let counter = 0;
+      let currendNode = this.head;
+      while (counter !== index) {
+        currendNode = currendNode.next;
+        counter++;
+      }
+      return currendNode;
+    }
   }
 
   const myList = new LinkedList(5);
