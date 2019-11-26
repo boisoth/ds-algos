@@ -79,6 +79,10 @@ test("Test if arrayChunking is defined", () => {
   expect(typeof arrayChunking).toEqual("function");
 });
 
+test("Test arrayChunking if array argument is empty", () => {
+  expect(arrayChunking([])).toEqual("Array has no items for chunking");
+});
+
 /**
  * Testing Fizz Buzz
  */
