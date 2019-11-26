@@ -3,6 +3,7 @@ const palindrome = require("./palindromes/index");
 const intRev = require("./interger-reversal");
 const maxChars = require("./max-chars");
 const fizzBuzz = require("./fizz-buzz");
+const arrayChunking = require("./array-chunking");
 const anagrams = require("./anagrams");
 
 /**
@@ -68,6 +69,14 @@ test("Test if maxChar is defined", () => {
 test("Test if a is the max character of abaaaaaak", () => {
   expect(maxChars("abaaaaaak")).toContain("a");
   // REMEMBER expect() is it's own function! Stop adding methods inside
+});
+
+/**
+ * Array Chunking
+ */
+
+test("Test if arrayChunking is defined", () => {
+  expect(typeof arrayChunking).toEqual("function");
 });
 
 /**
