@@ -31,12 +31,14 @@
       node.next = this.head;
       this.head = node;
       this.length++;
+      return this.printList();
     }
     append(data) {
       const node = new Node(data);
       this.tail.next = node;
       this.tail = node;
       this.length++;
+      return this.printList();
     }
     printList() {
       const dataArr = [];
@@ -61,7 +63,8 @@
       const newNode = new Node(data);
       newNode.next = holdingPointer.next;
       holdingPointer.next = newNode;
-      return console.log(this.printList());
+      this.length++;
+      return this.printList();
     }
   }
 
