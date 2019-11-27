@@ -71,6 +71,7 @@
       const unwanted = holdingPointer.next;
       holdingPointer.next = unwanted.next;
       unwanted.next = null;
+      this.length--;
       return this.printList();
     }
   }
