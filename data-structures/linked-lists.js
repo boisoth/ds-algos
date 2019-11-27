@@ -86,6 +86,7 @@
         previous = current;
         current = following;
       }
+      this.head = previous;
     }
   }
 
