@@ -5,7 +5,7 @@
  * printList() -- Prints all node data in an array √
  * traverseToIndex() -- Returns node at index √
  * insert() -- Inserts at index √
- * remove() -- Removes at index
+ * remove() -- Removes at index √
  * reverse() -- Reverses order of linked list
  */
 
@@ -47,7 +47,7 @@
         dataArr.push(currendNode.data);
         currendNode = currendNode.next;
       }
-      return dataArr;
+      return console.log(dataArr);
     }
     traverseToIndex(index) {
       let counter = 0;
@@ -74,13 +74,24 @@
       this.length--;
       return this.printList();
     }
+    reverse() {
+      let previous = null;
+      let current = this.head;
+      let following = this.head;
+      this.tail = this.head;
+    }
   }
 
   const myList = new LinkedList(5);
-  myList.prepend(2);
-  myList.append(10);
-  myList.append(15);
-  myList.append(20);
-  myList.insert(107, 3); // 10
-  myList.remove(3); // [ 5, 2, 10, 15, 20]
+  myList.append(6);
+  myList.append(7); // [5, 6, 7]
+  myList.reverse();
+
+  // For inserting nodes and removing etc.
+  // myList.prepend(2);
+  // myList.append(10);
+  // myList.append(15);
+  // myList.append(20);
+  // myList.insert(107, 3); // 10
+  // myList.remove(3); // [ 5, 2, 10, 15, 20]
 })();
