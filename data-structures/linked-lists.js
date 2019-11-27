@@ -80,7 +80,9 @@
       let following = this.head;
       this.tail = this.head;
 
-      while (current) {}
+      while (current) {
+        let following = current.next;
+      }
     }
   }
 
