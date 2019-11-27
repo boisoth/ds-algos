@@ -13,4 +13,7 @@ class HashTable {
     }
     return hash;
   }
+  set(key, value) {
+    let address = this._hash(key);
+  }
 }
