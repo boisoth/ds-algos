@@ -79,6 +79,8 @@
       let current = this.head;
       let following = this.head;
       this.tail = this.head;
+
+      while (current) {}
     }
   }
 
