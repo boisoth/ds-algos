@@ -4,7 +4,7 @@
  * append() -- Adds node to tail √
  * printList() -- Prints all node data in an array √
  * traverseToIndex() -- Returns node at index √
- * insert() -- Inserts at index
+ * insert() -- Inserts at index √
  * remove() -- Removes at index
  * reverse() -- Reverses order of linked list
  */
@@ -66,6 +66,13 @@
       this.length++;
       return this.printList();
     }
+    remove(index) {
+      const holdingPointer = this.traverseToIndex(index - 1);
+      const unwanted = holdingPointer.next;
+      holdingPointer.next = unwanted.next;
+      unwanted.next = null;
+      return this.printList();
+    }
   }
 
   const myList = new LinkedList(5);
@@ -74,4 +81,5 @@
   myList.append(15);
   myList.append(20);
   myList.insert(107, 3); // 10
+  myList.remove(3); // [ 5, 2, 10, 15, 20]
 })();
