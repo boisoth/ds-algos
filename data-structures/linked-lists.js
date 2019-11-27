@@ -6,7 +6,7 @@
  * traverseToIndex() -- Returns node at index √
  * insert() -- Inserts at index √
  * remove() -- Removes at index √
- * reverse() -- Reverses order of linked list
+ * reverse() -- Reverses order of linked list √
  */
 
 (function() {
@@ -87,6 +87,7 @@
         current = following;
       }
       this.head = previous;
+      return this.printList();
     }
   }
 
