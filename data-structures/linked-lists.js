@@ -1,9 +1,9 @@
 /**
  * Data Structure - Linked List
- * prepend() -- Adds node to head
- * append() -- Adds node to tail
- * printList() -- Prints all node data in an array
- * traverseToIndex() -- Returns node at index
+ * prepend() -- Adds node to head √
+ * append() -- Adds node to tail √
+ * printList() -- Prints all node data in an array √
+ * traverseToIndex() -- Returns node at index √
  * insert() -- Inserts at index
  * remove() -- Removes at index
  * reverse() -- Reverses order of linked list
@@ -56,10 +56,19 @@
       }
       return currendNode;
     }
+    insert(data, index) {
+      const holdingPointer = this.traverseToIndex(index - 1);
+      const newNode = new Node(data);
+      newNode.next = holdingPointer.next;
+      holdingPointer.next = newNode;
+      return console.log(this.printList());
+    }
   }
 
   const myList = new LinkedList(5);
   myList.prepend(2);
   myList.append(10);
-  console.log(myList.printList());
+  myList.append(15);
+  myList.append(20);
+  myList.insert(107, 3); // 10
 })();
