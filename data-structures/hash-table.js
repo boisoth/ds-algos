@@ -8,7 +8,7 @@ class HashTable {
   }
   _hash(key) {
     let hash = 0;
-    for (let i = 0; i < key.length; i++) {
+    for (let char of key) {
       hash = (hash + key.charCodeAt(i) * i) % this.data.length;
     }
     return hash;
