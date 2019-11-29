@@ -21,4 +21,8 @@ class HashTable {
     }
     this.data[address].push([key, value]);
   }
+  get(key) {
+    let address = this._hash(key);
+    return this.data[address] || false;
+  }
 }
