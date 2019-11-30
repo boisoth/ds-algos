@@ -9,7 +9,7 @@ class HashTable {
   _hash(key) {
     let hash = 0;
     for (let char of key) {
-      hash = (hash + key.charCodeAt(i) * i) % this.data.length;
+      hash = (hash + key.charCodeAt(char) * char) % this.data.length;
     }
     return hash;
   }
