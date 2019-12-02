@@ -22,3 +22,6 @@ class QueueA {
     this.data = [];
   }
 }
+
+// Queue Linked List Implementation
+class QueueL {}
