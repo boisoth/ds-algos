@@ -24,6 +24,6 @@ class Stack {
     if (!this.items.length) {
       return "No items";
     }
-    return this.items.length - 1;
+    return this.items[this.items.length - 1];
   }
 }
