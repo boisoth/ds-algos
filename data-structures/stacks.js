@@ -26,4 +26,17 @@ class Stack {
     }
     return this.items[this.items.length - 1];
   }
+  isEmpty() {
+    return this.items.length === 0;
+  }
+  printStack() {
+    return this.items || "Empty";
+  }
 }
+
+const myStack = new Stack();
+console.log(myStack.isEmpty());
+myStack.push(1);
+myStack.push(5);
+myStack.push(10);
+console.log(myStack.peek());
