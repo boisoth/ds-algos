@@ -47,7 +47,14 @@ console.log(myQueue.printQueue());
 
 // Queue Linked List Implementation
 class QueueL {
-  constructor() {}
+  constructor() {
+    this.head = {
+      data: null,
+      next: null
+    };
+    this.tail = this.head;
+    this.length = 0;
+  }
   enqueue(data) {}
   dequeue() {}
   size() {}
