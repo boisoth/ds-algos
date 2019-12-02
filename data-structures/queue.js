@@ -33,7 +33,7 @@ class QueueA {
     return this.printQueue();
   }
   dequeue() {
-    this.data.splice(0, 1);
+    this.data.shift();
     return this.printQueue();
   }
 }
@@ -46,4 +46,8 @@ myQueue.dequeue();
 console.log(myQueue.printQueue());
 
 // Queue Linked List Implementation
-class QueueL {}
+class QueueL {
+  constructor() {
+    this.first = null;
+  }
+}
