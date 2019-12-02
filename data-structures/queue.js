@@ -32,12 +32,17 @@ class QueueA {
     this.data.push(data);
     return this.printQueue();
   }
+  dequeue() {
+    this.data.splice(0, 1);
+    return this.printQueue();
+  }
 }
 
 const myQueue = new QueueA();
 myQueue.enqueue(20);
 myQueue.enqueue(30);
 myQueue.enqueue(40);
+myQueue.dequeue();
 console.log(myQueue.printQueue());
 
 // Queue Linked List Implementation
