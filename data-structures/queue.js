@@ -1,4 +1,5 @@
 import { notDeepEqual } from "assert";
+import { throwStatement } from "@babel/types";
 
 /**
  * Queue Data Structure
@@ -59,8 +60,8 @@ class QueueL {
   }
   enqueue(data) {
     const node = new Node(data);
-    node.next = this.head;
-    this.head = node;
+    this.tail.next = node;
+    this.length++;
     return;
   }
   dequeue() {}
