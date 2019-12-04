@@ -1,3 +1,5 @@
+import { notDeepEqual } from "assert";
+
 /**
  * Queue Data Structure
  * enqueue - add to the end
@@ -9,13 +11,6 @@
  * Array enqueue O(1), add to head O(n)
  * Linked Lists O(1), add to head O(1)
  */
-
-class Node {
-  constructor(data) {
-    this.data = data;
-    this.next = null;
-  }
-}
 
 // Queue Array Implementation
 class QueueA {
@@ -45,6 +40,13 @@ myQueue.enqueue(40);
 myQueue.dequeue();
 console.log(myQueue.printQueue());
 
+class Node {
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+  }
+}
+
 // Queue Linked List Implementation
 class QueueL {
   constructor() {
@@ -55,7 +57,12 @@ class QueueL {
     this.tail = this.head;
     this.length = 0;
   }
-  enqueue(data) {}
+  enqueue(data) {
+    const node = new Node(data);
+    node.next = this.head;
+    this.head = node;
+    return;
+  }
   dequeue() {}
   size() {}
   printQueue() {}
