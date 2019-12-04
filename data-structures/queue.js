@@ -64,7 +64,12 @@ class QueueL {
     this.length++;
     return;
   }
-  dequeue() {}
+  dequeue() {
+    const holdingPointer = this.head.next;
+    this.head = holdingPointer;
+    this.length--;
+    return;
+  }
   size() {}
   printQueue() {}
   isEmpty() {}
