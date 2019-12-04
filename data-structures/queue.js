@@ -1,6 +1,3 @@
-import { notDeepEqual } from "assert";
-import { throwStatement } from "@babel/types";
-
 /**
  * Queue Data Structure
  * enqueue - add to the end
@@ -50,9 +47,9 @@ class Node {
 
 // Queue Linked List Implementation
 class QueueL {
-  constructor() {
+  constructor(data) {
     this.head = {
-      data: null,
+      data: data,
       next: null
     };
     this.tail = this.head;
@@ -70,7 +67,12 @@ class QueueL {
     this.length--;
     return;
   }
-  size() {}
-  printQueue() {}
-  isEmpty() {}
+  // size() {}
+  // printQueue() {}
+  // isEmpty() {}
 }
+
+const queueList = new QueueL();
+queueList.enqueue(50);
+queueList.enqueue(60);
+console.log(queueList);
